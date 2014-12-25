@@ -12,6 +12,8 @@
 		E73F2D6E1A4B1C790025CB5C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E73F2D6D1A4B1C790025CB5C /* Images.xcassets */; };
 		E73F2D711A4B1C790025CB5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E73F2D6F1A4B1C790025CB5C /* Main.storyboard */; };
 		E73F2D7D1A4B1C790025CB5C /* SanstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73F2D7C1A4B1C790025CB5C /* SanstringTests.swift */; };
+		E7EDE8B31A548B4800763151 /* RegexOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDE8B21A548B4800763151 /* RegexOptions.swift */; };
+		E7EDE8B51A548C3900763151 /* RegexOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDE8B41A548C3900763151 /* RegexOptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		E73F2D761A4B1C790025CB5C /* SanstringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SanstringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73F2D7B1A4B1C790025CB5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E73F2D7C1A4B1C790025CB5C /* SanstringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanstringTests.swift; sourceTree = "<group>"; };
+		E7EDE8B21A548B4800763151 /* RegexOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexOptions.swift; sourceTree = "<group>"; };
+		E7EDE8B41A548C3900763151 /* RegexOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexOptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				E73F2D6D1A4B1C790025CB5C /* Images.xcassets */,
 				E73F2D6F1A4B1C790025CB5C /* Main.storyboard */,
 				E73F2D671A4B1C790025CB5C /* Supporting Files */,
+				E7EDE8B21A548B4800763151 /* RegexOptions.swift */,
+				E7EDE8B41A548C3900763151 /* RegexOptionViewController.swift */,
 			);
 			path = Sanstring;
 			sourceTree = "<group>";
@@ -208,6 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7EDE8B31A548B4800763151 /* RegexOptions.swift in Sources */,
+				E7EDE8B51A548C3900763151 /* RegexOptionViewController.swift in Sources */,
 				E73F2D6C1A4B1C790025CB5C /* ViewController.swift in Sources */,
 				E73F2D6A1A4B1C790025CB5C /* AppDelegate.swift in Sources */,
 			);
@@ -397,6 +405,7 @@
 				E73F2D821A4B1C790025CB5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E73F2D831A4B1C790025CB5C /* Build configuration list for PBXNativeTarget "SanstringTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +414,7 @@
 				E73F2D851A4B1C790025CB5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

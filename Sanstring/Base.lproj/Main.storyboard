@@ -644,7 +644,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Sanstring" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="75" y="-44"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -656,14 +656,76 @@
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="480" height="270"/>
+                        <toolbar key="toolbar" implicitIdentifier="1651CB78-08DA-4793-B605-680F619A1582" displayMode="iconAndLabel" sizeMode="small" id="alK-Cv-6b4">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSeparatorItem" id="EHV-Cs-VNg"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="wAv-XW-cP1"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="IBn-yW-QVn"/>
+                                <toolbarItem implicitItemIdentifier="D9DE9FE3-2BAE-4389-B69E-4E1F0433B81C" label="Options" paletteLabel="Options" tag="-1" image="Options" id="H5d-a7-YKM">
+                                    <connections>
+                                        <segue destination="zfw-Iv-EKg" kind="popover" popoverAnchorView="H5d-a7-YKM" popoverBehavior="t" preferredEdge="maxY" id="gjv-rJ-tKw"/>
+                                    </connections>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="wAv-XW-cP1"/>
+                                <toolbarItem reference="H5d-a7-YKM"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="9Pc-Dc-EWJ"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--Regex Option View Controller-->
+        <scene sceneID="0tv-oS-caf">
+            <objects>
+                <viewController id="zfw-Iv-EKg" customClass="RegexOptionViewController" customModule="Sanstring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="PHE-9V-AFF">
+                        <rect key="frame" x="0.0" y="0.0" width="258" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="NwD-0A-efg">
+                                <rect key="frame" x="18" y="264" width="123" height="18"/>
+                                <buttonCell key="cell" type="check" title="Case Insensitive" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Gza-6e-aYb">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="toggleCaseSensitivity:" target="zfw-Iv-EKg" id="5pY-ab-2x8"/>
+                                </connections>
+                            </button>
+                            <button horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-eO-5ev">
+                                <rect key="frame" x="18" y="233" width="222" height="18"/>
+                                <buttonCell key="cell" type="check" title="Allows Comments &amp; Whitespace" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="SEM-bP-n74">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="toggleWhitespace:" target="zfw-Iv-EKg" id="WAz-Uu-Ch4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Cde-eO-5ev" secondAttribute="trailing" constant="20" id="1QI-LV-hO4"/>
+                            <constraint firstItem="Cde-eO-5ev" firstAttribute="leading" secondItem="PHE-9V-AFF" secondAttribute="leading" constant="20" id="8dd-8k-sTs"/>
+                            <constraint firstItem="Cde-eO-5ev" firstAttribute="top" secondItem="NwD-0A-efg" secondAttribute="bottom" constant="17" id="c0r-Vj-nhp"/>
+                            <constraint firstItem="NwD-0A-efg" firstAttribute="leading" secondItem="PHE-9V-AFF" secondAttribute="leading" constant="20" id="qAY-84-UbT"/>
+                            <constraint firstItem="NwD-0A-efg" firstAttribute="top" secondItem="PHE-9V-AFF" secondAttribute="top" constant="20" id="uad-fT-Pxv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="caseInsensitiveButton" destination="NwD-0A-efg" id="eBZ-Nw-988"/>
+                        <outlet property="whitespaceButton" destination="Cde-eO-5ev" id="eCs-mZ-Y2Y"/>
+                    </connections>
+                </viewController>
+                <customObject id="Kan-lb-5qm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="689" y="676"/>
         </scene>
         <!--Sanstring-->
         <scene sceneID="hIz-AP-VOD">
@@ -684,10 +746,10 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="minSize" width="588" height="122"/>
-                                            <size key="maxSize" width="588" height="10000000"/>
+                                            <size key="maxSize" width="590" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <size key="minSize" width="588" height="122"/>
-                                            <size key="maxSize" width="588" height="10000000"/>
+                                            <size key="maxSize" width="590" height="10000000"/>
                                             <connections>
                                                 <outlet property="delegate" destination="XfG-lQ-9wD" id="7ci-8O-6j6"/>
                                             </connections>
@@ -697,6 +759,7 @@
                                 </clipView>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="124" id="S9n-AD-gYl"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="kKm-Gx-MsC"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="gR1-6C-gwT">
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
@@ -726,10 +789,10 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="minSize" width="588" height="122"/>
-                                            <size key="maxSize" width="588" height="10000000"/>
+                                            <size key="maxSize" width="590" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <size key="minSize" width="588" height="122"/>
-                                            <size key="maxSize" width="588" height="10000000"/>
+                                            <size key="maxSize" width="590" height="10000000"/>
                                             <connections>
                                                 <outlet property="delegate" destination="XfG-lQ-9wD" id="8O7-yP-xJ5"/>
                                             </connections>
@@ -781,7 +844,10 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="738"/>
+            <point key="canvasLocation" x="75" y="684"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Options" width="18" height="18"/>
+    </resources>
 </document>

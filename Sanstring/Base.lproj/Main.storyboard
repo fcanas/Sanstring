@@ -686,11 +686,11 @@
             <objects>
                 <viewController id="zfw-Iv-EKg" customClass="RegexOptionViewController" customModule="Sanstring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="PHE-9V-AFF">
-                        <rect key="frame" x="0.0" y="0.0" width="258" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="258" height="85"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button translatesAutoresizingMaskIntoConstraints="NO" id="NwD-0A-efg">
-                                <rect key="frame" x="18" y="264" width="123" height="18"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NwD-0A-efg">
+                                <rect key="frame" x="18" y="49" width="123" height="18"/>
                                 <buttonCell key="cell" type="check" title="Case Insensitive" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Gza-6e-aYb">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -699,8 +699,8 @@
                                     <action selector="toggleCaseSensitivity:" target="zfw-Iv-EKg" id="5pY-ab-2x8"/>
                                 </connections>
                             </button>
-                            <button horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-eO-5ev">
-                                <rect key="frame" x="18" y="233" width="222" height="18"/>
+                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-eO-5ev">
+                                <rect key="frame" x="18" y="18" width="222" height="18"/>
                                 <buttonCell key="cell" type="check" title="Allows Comments &amp; Whitespace" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="SEM-bP-n74">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -712,6 +712,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Cde-eO-5ev" secondAttribute="trailing" constant="20" id="1QI-LV-hO4"/>
+                            <constraint firstAttribute="bottom" secondItem="Cde-eO-5ev" secondAttribute="bottom" constant="20" id="1cf-LV-HUJ"/>
                             <constraint firstItem="Cde-eO-5ev" firstAttribute="leading" secondItem="PHE-9V-AFF" secondAttribute="leading" constant="20" id="8dd-8k-sTs"/>
                             <constraint firstItem="Cde-eO-5ev" firstAttribute="top" secondItem="NwD-0A-efg" secondAttribute="bottom" constant="17" id="c0r-Vj-nhp"/>
                             <constraint firstItem="NwD-0A-efg" firstAttribute="leading" secondItem="PHE-9V-AFF" secondAttribute="leading" constant="20" id="qAY-84-UbT"/>
@@ -725,7 +726,7 @@
                 </viewController>
                 <customObject id="Kan-lb-5qm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="689" y="676"/>
+            <point key="canvasLocation" x="677" y="584.5"/>
         </scene>
         <!--Sanstring-->
         <scene sceneID="hIz-AP-VOD">

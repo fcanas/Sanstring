@@ -29,24 +29,6 @@ class RegexOptionViewController: NSViewController {
         NSNotificationCenter.defaultCenter().postNotificationName("RegexOptionsChanged", object: nil)
     }
     
-    func bitSetter<T: RawOptionSetType>(value: Int) -> (T,T)->T {
-        if value==1 {
-            return flipOn
-        } else {
-            return flipOff
-        }
-    }
     
-    func flipOn<T: RawOptionSetType>(value: T, change: T) -> T {
-        return T(rawValue: value.rawValue | change.rawValue )
-    }
-    
-    func flipOff<T: RawOptionSetType>(value: T, change: T) -> T {
-        return T(rawValue: value.rawValue & ~change.rawValue )
-    }
-    
-    func toggle<T: RawOptionSetType>(value: T, change: T) -> T {
-        return T(rawValue: value.rawValue ^ change.rawValue )
-    }
     
 }

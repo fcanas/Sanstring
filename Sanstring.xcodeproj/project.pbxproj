@@ -14,6 +14,7 @@
 		E73F2D7D1A4B1C790025CB5C /* SanstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73F2D7C1A4B1C790025CB5C /* SanstringTests.swift */; };
 		E7EDE8B31A548B4800763151 /* RegexOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDE8B21A548B4800763151 /* RegexOptions.swift */; };
 		E7EDE8B51A548C3900763151 /* RegexOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDE8B41A548C3900763151 /* RegexOptionViewController.swift */; };
+		E7FA777F1A54C38B00BBE466 /* BitFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FA777E1A54C38B00BBE466 /* BitFields.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		E73F2D7C1A4B1C790025CB5C /* SanstringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanstringTests.swift; sourceTree = "<group>"; };
 		E7EDE8B21A548B4800763151 /* RegexOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexOptions.swift; sourceTree = "<group>"; };
 		E7EDE8B41A548C3900763151 /* RegexOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexOptionViewController.swift; sourceTree = "<group>"; };
+		E7FA777E1A54C38B00BBE466 /* BitFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitFields.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				E73F2D671A4B1C790025CB5C /* Supporting Files */,
 				E7EDE8B21A548B4800763151 /* RegexOptions.swift */,
 				E7EDE8B41A548C3900763151 /* RegexOptionViewController.swift */,
+				E7FA777E1A54C38B00BBE466 /* BitFields.swift */,
 			);
 			path = Sanstring;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7EDE8B31A548B4800763151 /* RegexOptions.swift in Sources */,
+				E7FA777F1A54C38B00BBE466 /* BitFields.swift in Sources */,
 				E7EDE8B51A548C3900763151 /* RegexOptionViewController.swift in Sources */,
 				E73F2D6C1A4B1C790025CB5C /* ViewController.swift in Sources */,
 				E73F2D6A1A4B1C790025CB5C /* AppDelegate.swift in Sources */,

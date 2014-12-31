@@ -27,23 +27,11 @@ class ViewController: NSViewController, NSTextViewDelegate {
     @IBOutlet weak var replaceTextField: NSTextField!
     @IBOutlet var outputTextView: NSTextView!
     
-    var regexOptions :NSRegularExpressionOptions {
-        get {
-            return globalRegexOptions()
-        }
-    }
-    
-    var matchingOptions :NSMatchingOptions {
-        get {
-            return nil
-        }
-    }
-    
     func textDidChange(notification: NSNotification) {
         let e = NSErrorPointer()
-        let regex = NSRegularExpression(pattern: regexTextField.stringValue, options: regexOptions, error: e)
+        let regex = NSRegularExpression(pattern: regexTextField.stringValue, options: globalRegexOptions(), error: e)
         let inputString = inputTextView.string ?? ""
-        outputTextView.string = regex?.stringByReplacingMatchesInString(inputString, options: matchingOptions, range: NSMakeRange(0, countElements(inputString)), withTemplate: replaceTextField.stringValue) ?? ""
+        outputTextView.string = regex?.stringByReplacingMatchesInString(inputString, options: nil, range: NSMakeRange(0, countElements(inputString)), withTemplate: replaceTextField.stringValue) ?? ""
     }
 }
 

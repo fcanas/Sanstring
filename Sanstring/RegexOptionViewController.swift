@@ -28,7 +28,4 @@ class RegexOptionViewController: NSViewController {
         setGlobalRegexOptions(bitSetter(sender.state)(globalRegexOptions(), NSRegularExpressionOptions.CaseInsensitive))
         NSNotificationCenter.defaultCenter().postNotificationName("RegexOptionsChanged", object: nil)
     }
-    
-    
-    
 }

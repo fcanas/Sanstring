@@ -31,7 +31,7 @@ class ViewController: NSViewController, NSTextViewDelegate {
         let e = NSErrorPointer()
         let regex = NSRegularExpression(pattern: regexTextField.stringValue, options: globalRegexOptions(), error: e)
         let inputString = inputTextView.string ?? ""
-        outputTextView.string = regex?.stringByReplacingMatchesInString(inputString, options: nil, range: NSMakeRange(0, countElements(inputString)), withTemplate: replaceTextField.stringValue) ?? ""
+        outputTextView.string = regex?.stringByReplacingMatchesInString(inputString, options: nil, range: NSMakeRange(0, count(inputString)), withTemplate: replaceTextField.stringValue) ?? ""
     }
 }
 

@@ -8,13 +8,10 @@
 
 import Foundation
 
-private var options :NSRegularExpressionOptions = nil
+private var options :NSRegularExpressionOptions = NSRegularExpressionOptions(rawValue: UInt(NSUserDefaults.standardUserDefaults().integerForKey(regexOptionsKey)))
 private let regexOptionsKey = "regexOptionsKey"
 
 func globalRegexOptions() -> NSRegularExpressionOptions {
-    if options == nil {
-        options = NSRegularExpressionOptions(UInt(NSUserDefaults.standardUserDefaults().integerForKey(regexOptionsKey)))
-    }
     return options
 }
 

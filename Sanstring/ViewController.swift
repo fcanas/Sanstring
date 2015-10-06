@@ -28,10 +28,14 @@ class ViewController: NSViewController, NSTextViewDelegate {
     @IBOutlet var outputTextView: NSTextView!
     
     func textDidChange(notification: NSNotification) {
-        let e = NSErrorPointer()
-        let regex = NSRegularExpression(pattern: regexTextField.stringValue, options: globalRegexOptions(), error: e)
+        let regex: NSRegularExpression?
+        do {
+            regex = try NSRegularExpression(pattern: regexTextField.stringValue, options: globalRegexOptions())
+        } catch _ {
+            regex = nil
+        }
         let inputString = inputTextView.string ?? ""
-        outputTextView.string = regex?.stringByReplacingMatchesInString(inputString, options: nil, range: NSMakeRange(0, count(inputString)), withTemplate: replaceTextField.stringValue) ?? ""
+        outputTextView.string = regex?.stringByReplacingMatchesInString(inputString, options: [], range: NSMakeRange(0, inputString.characters.count), withTemplate: replaceTextField.stringValue) ?? ""
     }
 }
 

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Fabian Canas. All rights reserved.
 //
 
-func bitSetter<T: RawOptionSetType>(value: Int) -> (T,T)->T {
+func bitSetter<T: OptionSetType>(value: Int) -> (T,T)->T {
     if value==1 {
         return flipOn
     } else {
@@ -14,14 +14,15 @@ func bitSetter<T: RawOptionSetType>(value: Int) -> (T,T)->T {
     }
 }
 
-func flipOn<T: RawOptionSetType>(value: T, change: T) -> T {
-    return T(rawValue: value.rawValue | change.rawValue )
+func flipOn<T: OptionSetType>(value: T, change: T) -> T {
+    return T(rawValue: value.union(change).rawValue )
 }
 
-func flipOff<T: RawOptionSetType>(value: T, change: T) -> T {
-    return T(rawValue: value.rawValue & ~change.rawValue )
+func flipOff<T: OptionSetType>(value: T, change: T) -> T {
+    
+    return T(rawValue: value.subtract(change).rawValue)
 }
 
-func toggle<T: RawOptionSetType>(value: T, change: T) -> T {
-    return T(rawValue: value.rawValue ^ change.rawValue )
+func toggle<T: OptionSetType>(value: T, change: T) -> T {
+    return T(rawValue: value.exclusiveOr(change).rawValue )
 }

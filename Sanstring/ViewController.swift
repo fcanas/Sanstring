@@ -24,7 +24,7 @@ class ViewController: NSViewController {
     func textDidChange(notification: NSNotification) {
         let regex: NSRegularExpression?
         do {
-            regex = try NSRegularExpression(pattern: regexTextField.stringValue, options: globalRegexOptions())
+            regex = try NSRegularExpression(pattern: regexTextField.stringValue, options: GlobalRegexOptions)
         } catch _ {
             regex = nil
         }

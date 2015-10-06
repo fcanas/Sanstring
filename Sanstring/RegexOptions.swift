@@ -8,15 +8,11 @@
 
 import Foundation
 
-private var options :NSRegularExpressionOptions = NSRegularExpressionOptions(rawValue: UInt(NSUserDefaults.standardUserDefaults().integerForKey(regexOptionsKey)))
-private let regexOptionsKey = "regexOptionsKey"
+private let RegexOptionsKey = "regexOptionsKey"
 internal let RegexOptionsChangedKey = "RegexOptionsChanged"
 
-func globalRegexOptions() -> NSRegularExpressionOptions {
-    return options
-}
-
-func setGlobalRegexOptions(opts: NSRegularExpressionOptions) {
-    options = opts
-    NSUserDefaults.standardUserDefaults().setInteger(Int(options.rawValue), forKey: regexOptionsKey)
+internal var GlobalRegexOptions :NSRegularExpressionOptions = NSRegularExpressionOptions(rawValue: UInt(NSUserDefaults.standardUserDefaults().integerForKey(RegexOptionsKey))) {
+    didSet {
+        NSUserDefaults.standardUserDefaults().setInteger(Int(GlobalRegexOptions.rawValue), forKey: RegexOptionsKey)
+    }
 }

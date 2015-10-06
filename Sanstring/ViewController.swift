@@ -12,14 +12,8 @@ class ViewController: NSViewController, NSTextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("textDidChange:"), name: NSControlTextDidChangeNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("textDidChange:"), name: "RegexOptionsChanged", object: nil)
-    }
-
-    override var representedObject: AnyObject? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "textDidChange:", name: NSControlTextDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "textDidChange:", name: RegexOptionsChangedKey, object: nil)
     }
     
     @IBOutlet var inputTextView: NSTextView!
@@ -36,6 +30,10 @@ class ViewController: NSViewController, NSTextViewDelegate {
         }
         let inputString = inputTextView.string ?? ""
         outputTextView.string = regex?.stringByReplacingMatchesInString(inputString, options: [], range: NSMakeRange(0, inputString.characters.count), withTemplate: replaceTextField.stringValue) ?? ""
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 }
 

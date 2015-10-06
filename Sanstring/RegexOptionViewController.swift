@@ -20,12 +20,12 @@ class RegexOptionViewController: NSViewController {
     @IBOutlet weak var whitespaceButton: NSButton!
     @IBAction func toggleWhitespace(sender: NSButton) {
         setGlobalRegexOptions(bitSetter(sender.state)(globalRegexOptions(), NSRegularExpressionOptions.AllowCommentsAndWhitespace))
-        NSNotificationCenter.defaultCenter().postNotificationName("RegexOptionsChanged", object: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(RegexOptionsChangedKey, object: nil)
     }
     
     @IBOutlet weak var caseInsensitiveButton: NSButton!
     @IBAction func toggleCaseSensitivity(sender: NSButton) {
         setGlobalRegexOptions(bitSetter(sender.state)(globalRegexOptions(), NSRegularExpressionOptions.CaseInsensitive))
-        NSNotificationCenter.defaultCenter().postNotificationName("RegexOptionsChanged", object: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(RegexOptionsChangedKey, object: nil)
     }
 }

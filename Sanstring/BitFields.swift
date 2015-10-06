@@ -19,7 +19,6 @@ func flipOn<T: OptionSetType>(value: T, change: T) -> T {
 }
 
 func flipOff<T: OptionSetType>(value: T, change: T) -> T {
-    
     return T(rawValue: value.subtract(change).rawValue)
 }
 

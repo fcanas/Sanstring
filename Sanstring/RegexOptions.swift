@@ -10,6 +10,7 @@ import Foundation
 
 private var options :NSRegularExpressionOptions = NSRegularExpressionOptions(rawValue: UInt(NSUserDefaults.standardUserDefaults().integerForKey(regexOptionsKey)))
 private let regexOptionsKey = "regexOptionsKey"
+internal let RegexOptionsChangedKey = "RegexOptionsChanged"
 
 func globalRegexOptions() -> NSRegularExpressionOptions {
     return options

@@ -663,7 +663,7 @@
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="IBn-yW-QVn"/>
                                 <toolbarItem implicitItemIdentifier="D9DE9FE3-2BAE-4389-B69E-4E1F0433B81C" label="Options" paletteLabel="Options" tag="-1" image="Options" id="H5d-a7-YKM">
                                     <connections>
-                                        <segue destination="zfw-Iv-EKg" kind="popover" popoverAnchorView="H5d-a7-YKM" popoverBehavior="t" preferredEdge="maxY" id="gjv-rJ-tKw"/>
+                                        <segue destination="zfw-Iv-EKg" kind="popover" popoverAnchorView="H5d-a7-YKM" popoverBehavior="semitransient" preferredEdge="maxY" id="gjv-rJ-tKw"/>
                                     </connections>
                                 </toolbarItem>
                             </allowedToolbarItems>
@@ -746,10 +746,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="588" height="122"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="588" height="122"/>
+                                            <size key="minSize" width="573" height="122"/>
                                             <size key="maxSize" width="590" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="588" height="122"/>
+                                            <size key="minSize" width="573" height="122"/>
                                             <size key="maxSize" width="590" height="10000000"/>
                                         </textView>
                                     </subviews>
@@ -764,7 +764,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Is9-5f-bRk">
-                                    <rect key="frame" x="573" y="1" width="16" height="122"/>
+                                    <rect key="frame" x="574" y="1" width="15" height="122"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -786,10 +786,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="588" height="122"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="588" height="122"/>
+                                            <size key="minSize" width="573" height="122"/>
                                             <size key="maxSize" width="590" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="588" height="122"/>
+                                            <size key="minSize" width="573" height="122"/>
                                             <size key="maxSize" width="590" height="10000000"/>
                                         </textView>
                                     </subviews>
@@ -800,7 +800,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="pAg-nC-UHj">
-                                    <rect key="frame" x="573" y="1" width="16" height="122"/>
+                                    <rect key="frame" x="574" y="1" width="15" height="122"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>

@@ -14,5 +14,6 @@ internal let RegexOptionsChangedKey = "RegexOptionsChanged"
 internal var GlobalRegexOptions :NSRegularExpressionOptions = NSRegularExpressionOptions(rawValue: UInt(NSUserDefaults.standardUserDefaults().integerForKey(RegexOptionsKey))) {
     didSet {
         NSUserDefaults.standardUserDefaults().setInteger(Int(GlobalRegexOptions.rawValue), forKey: RegexOptionsKey)
+        NSNotificationCenter.defaultCenter().postNotificationName(RegexOptionsChangedKey, object: nil)
     }
 }

@@ -828,6 +828,9 @@
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <size key="minSize" width="588" height="122"/>
                                             <size key="maxSize" width="590" height="10000000"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="XfG-lQ-9wD" id="y5s-1f-Ycf"/>
+                                            </connections>
                                         </textView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

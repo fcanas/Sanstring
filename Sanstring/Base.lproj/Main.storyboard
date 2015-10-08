@@ -686,47 +686,124 @@
             <objects>
                 <viewController id="zfw-Iv-EKg" customClass="RegexOptionViewController" customModule="Sanstring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="PHE-9V-AFF">
-                        <rect key="frame" x="0.0" y="0.0" width="258" height="85"/>
+                        <rect key="frame" x="0.0" y="0.0" width="252" height="237"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NwD-0A-efg">
-                                <rect key="frame" x="18" y="49" width="123" height="18"/>
-                                <buttonCell key="cell" type="check" title="Case Insensitive" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Gza-6e-aYb">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="toggleCaseSensitivity:" target="zfw-Iv-EKg" id="5pY-ab-2x8"/>
-                                </connections>
-                            </button>
-                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-eO-5ev">
-                                <rect key="frame" x="18" y="18" width="222" height="18"/>
-                                <buttonCell key="cell" type="check" title="Allows Comments &amp; Whitespace" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="SEM-bP-n74">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="toggleWhitespace:" target="zfw-Iv-EKg" id="WAz-Uu-Ch4"/>
-                                </connections>
-                            </button>
+                            <stackView orientation="vertical" alignment="leading" spacing="17" horizontalStackHuggingPriority="750" verticalStackHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XFe-8k-QM1">
+                                <rect key="frame" x="0.0" y="0.0" width="252" height="237"/>
+                                <edgeInsets key="edgeInsets" left="17" right="17" top="20" bottom="17"/>
+                                <beginningViews>
+                                    <button toolTip="Match letters in the pattern independent of case." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwD-0A-efg">
+                                        <rect key="frame" x="-2" y="184" width="123" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Case Insensitive" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Gza-6e-aYb">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toggleCaseSensitivity:" target="zfw-Iv-EKg" id="5pY-ab-2x8"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Ignore whitespace and #-prefixed comments in the pattern." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-eO-5ev">
+                                        <rect key="frame" x="-2" y="153" width="222" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Allows Comments &amp; Whitespace" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="SEM-bP-n74">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toggleWhitespace:" target="zfw-Iv-EKg" id="WAz-Uu-Ch4"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Treat the entire pattern as a literal string." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U43-LT-5ZC">
+                                        <rect key="frame" x="-2" y="122" width="161" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Ignore Metacharacters" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="gqp-Ia-yaq">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toggleIgnoreMetaCharacters:" target="zfw-Iv-EKg" id="cUj-bi-wJO"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Match letters in the pattern independent of case." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13F-qh-X9v">
+                                        <rect key="frame" x="-2" y="91" width="202" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Dot Matches Line Separators" bezelStyle="regularSquare" imagePosition="left" state="on" toolTip="Allow . to match any character, including line separators." inset="2" id="PKQ-NS-tJH">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toggleDotMatchesLineSeparatos:" target="zfw-Iv-EKg" id="AGs-uJ-UdA"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Allow ^ and $ to match the start and end of lines." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VmA-Zd-Of2">
+                                        <rect key="frame" x="-2" y="60" width="152" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Anchors Match Lines" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="clJ-za-6Jv">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toggleAnchorsMatchLines:" target="zfw-Iv-EKg" id="cAh-ud-APB"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Treat only \n as a line separator (otherwise, all standard line separators are used)." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FBv-0y-Q1l">
+                                        <rect key="frame" x="-2" y="29" width="179" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Use Unix Line Separators" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="zug-ns-lRZ">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toggleUseUnixLineSeparators:" target="zfw-Iv-EKg" id="6ST-ur-E0C"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Use Unicode TR#29 to specify word boundaries (otherwise, traditional regular expression word boundaries are used)." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arq-r2-03h">
+                                        <rect key="frame" x="-2" y="-2" width="212" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Use Unicode Word Boundaries" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="iEI-sM-zjG">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toggleUseUnicodeWordBoundaries:" target="zfw-Iv-EKg" id="yQM-zG-ab0"/>
+                                        </connections>
+                                    </button>
+                                </beginningViews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Cde-eO-5ev" secondAttribute="trailing" constant="20" id="1QI-LV-hO4"/>
-                            <constraint firstAttribute="bottom" secondItem="Cde-eO-5ev" secondAttribute="bottom" constant="20" id="1cf-LV-HUJ"/>
-                            <constraint firstItem="Cde-eO-5ev" firstAttribute="leading" secondItem="PHE-9V-AFF" secondAttribute="leading" constant="20" id="8dd-8k-sTs"/>
-                            <constraint firstItem="Cde-eO-5ev" firstAttribute="top" secondItem="NwD-0A-efg" secondAttribute="bottom" constant="17" id="c0r-Vj-nhp"/>
-                            <constraint firstItem="NwD-0A-efg" firstAttribute="leading" secondItem="PHE-9V-AFF" secondAttribute="leading" constant="20" id="qAY-84-UbT"/>
-                            <constraint firstItem="NwD-0A-efg" firstAttribute="top" secondItem="PHE-9V-AFF" secondAttribute="top" constant="20" id="uad-fT-Pxv"/>
+                            <constraint firstAttribute="bottom" secondItem="XFe-8k-QM1" secondAttribute="bottom" id="580-qw-fUF"/>
+                            <constraint firstItem="XFe-8k-QM1" firstAttribute="leading" secondItem="PHE-9V-AFF" secondAttribute="leading" id="65E-Xv-L7a"/>
+                            <constraint firstAttribute="trailing" secondItem="XFe-8k-QM1" secondAttribute="trailing" id="Luj-9I-s2a"/>
+                            <constraint firstItem="XFe-8k-QM1" firstAttribute="top" secondItem="PHE-9V-AFF" secondAttribute="top" id="Pa8-l8-qx3"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="anchorsMatchLinesButton" destination="VmA-Zd-Of2" id="o97-zs-TEF"/>
                         <outlet property="caseInsensitiveButton" destination="NwD-0A-efg" id="eBZ-Nw-988"/>
+                        <outlet property="dotMatchesLineSeparatorsButton" destination="13F-qh-X9v" id="Dpt-Lh-8Ae"/>
+                        <outlet property="ignoreMetaCharactersButton" destination="U43-LT-5ZC" id="oPk-Da-0zs"/>
+                        <outlet property="useUnicodeWordBoundariesButton" destination="arq-r2-03h" id="J0q-nz-GcX"/>
+                        <outlet property="useUnixLineSeparatorsButton" destination="FBv-0y-Q1l" id="egZ-qe-pQE"/>
                         <outlet property="whitespaceButton" destination="Cde-eO-5ev" id="eCs-mZ-Y2Y"/>
                     </connections>
                 </viewController>
                 <customObject id="Kan-lb-5qm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="677" y="584.5"/>
+            <point key="canvasLocation" x="677" y="662.5"/>
         </scene>
         <!--Sanstring-->
         <scene sceneID="hIz-AP-VOD">
@@ -746,10 +823,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="588" height="122"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="573" height="122"/>
+                                            <size key="minSize" width="588" height="122"/>
                                             <size key="maxSize" width="590" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="573" height="122"/>
+                                            <size key="minSize" width="588" height="122"/>
                                             <size key="maxSize" width="590" height="10000000"/>
                                         </textView>
                                     </subviews>
@@ -764,7 +841,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Is9-5f-bRk">
-                                    <rect key="frame" x="574" y="1" width="15" height="122"/>
+                                    <rect key="frame" x="573" y="1" width="16" height="122"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -786,10 +863,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="588" height="122"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="573" height="122"/>
+                                            <size key="minSize" width="588" height="122"/>
                                             <size key="maxSize" width="590" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="573" height="122"/>
+                                            <size key="minSize" width="588" height="122"/>
                                             <size key="maxSize" width="590" height="10000000"/>
                                         </textView>
                                     </subviews>
@@ -800,7 +877,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="pAg-nC-UHj">
-                                    <rect key="frame" x="574" y="1" width="15" height="122"/>
+                                    <rect key="frame" x="573" y="1" width="16" height="122"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -839,7 +916,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="684"/>
+            <point key="canvasLocation" x="75" y="707"/>
         </scene>
     </scenes>
     <resources>

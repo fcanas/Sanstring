@@ -725,7 +725,7 @@
                                     </button>
                                     <button toolTip="Match letters in the pattern independent of case." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13F-qh-X9v">
                                         <rect key="frame" x="-2" y="91" width="202" height="18"/>
-                                        <buttonCell key="cell" type="check" title="Dot Matches Line Separators" bezelStyle="regularSquare" imagePosition="left" state="on" toolTip="Allow . to match any character, including line separators." inset="2" id="PKQ-NS-tJH">
+                                        <buttonCell key="cell" type="check" title="Dot Matches Line Separators" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="PKQ-NS-tJH">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>

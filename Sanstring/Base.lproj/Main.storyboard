@@ -700,7 +700,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="toggleCaseSensitivity:" target="zfw-Iv-EKg" id="5pY-ab-2x8"/>
+                                            <action selector="toggleOption:" target="zfw-Iv-EKg" id="yCU-LS-vrY"/>
                                         </connections>
                                     </button>
                                     <button toolTip="Ignore whitespace and #-prefixed comments in the pattern." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-eO-5ev">
@@ -710,7 +710,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="toggleWhitespace:" target="zfw-Iv-EKg" id="WAz-Uu-Ch4"/>
+                                            <action selector="toggleOption:" target="zfw-Iv-EKg" id="cdd-gi-mhW"/>
                                         </connections>
                                     </button>
                                     <button toolTip="Treat the entire pattern as a literal string." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U43-LT-5ZC">
@@ -720,7 +720,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="toggleIgnoreMetaCharacters:" target="zfw-Iv-EKg" id="cUj-bi-wJO"/>
+                                            <action selector="toggleOption:" target="zfw-Iv-EKg" id="Xz0-jP-Sj5"/>
                                         </connections>
                                     </button>
                                     <button toolTip="Match letters in the pattern independent of case." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13F-qh-X9v">
@@ -730,7 +730,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="toggleDotMatchesLineSeparatos:" target="zfw-Iv-EKg" id="AGs-uJ-UdA"/>
+                                            <action selector="toggleOption:" target="zfw-Iv-EKg" id="3Pg-5s-qIu"/>
                                         </connections>
                                     </button>
                                     <button toolTip="Allow ^ and $ to match the start and end of lines." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VmA-Zd-Of2">
@@ -740,7 +740,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="toggleAnchorsMatchLines:" target="zfw-Iv-EKg" id="cAh-ud-APB"/>
+                                            <action selector="toggleOption:" target="zfw-Iv-EKg" id="b5N-dX-Cmn"/>
                                         </connections>
                                     </button>
                                     <button toolTip="Treat only \n as a line separator (otherwise, all standard line separators are used)." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FBv-0y-Q1l">
@@ -750,7 +750,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="toggleUseUnixLineSeparators:" target="zfw-Iv-EKg" id="6ST-ur-E0C"/>
+                                            <action selector="toggleOption:" target="zfw-Iv-EKg" id="xs8-hx-B9j"/>
                                         </connections>
                                     </button>
                                     <button toolTip="Use Unicode TR#29 to specify word boundaries (otherwise, traditional regular expression word boundaries are used)." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arq-r2-03h">
@@ -760,7 +760,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="toggleUseUnicodeWordBoundaries:" target="zfw-Iv-EKg" id="yQM-zG-ab0"/>
+                                            <action selector="toggleOption:" target="zfw-Iv-EKg" id="2D2-AP-N7i"/>
                                         </connections>
                                     </button>
                                 </beginningViews>

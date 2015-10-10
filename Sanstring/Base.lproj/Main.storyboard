@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
     </dependencies>
@@ -686,15 +686,17 @@
             <objects>
                 <viewController id="zfw-Iv-EKg" customClass="RegexOptionViewController" customModule="Sanstring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="PHE-9V-AFF">
-                        <rect key="frame" x="0.0" y="0.0" width="252" height="237"/>
+                        <rect key="frame" x="0.0" y="0.0" width="251" height="240"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView orientation="vertical" alignment="leading" spacing="17" horizontalStackHuggingPriority="750" verticalStackHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XFe-8k-QM1">
-                                <rect key="frame" x="0.0" y="0.0" width="252" height="237"/>
-                                <edgeInsets key="edgeInsets" left="17" right="17" top="20" bottom="17"/>
+                            <stackView orientation="vertical" alignment="leading" spacing="17" hasEqualSpacing="YES" horizontalStackHuggingPriority="750" verticalStackHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XFe-8k-QM1">
+                                <rect key="frame" x="0.0" y="0.0" width="251" height="240"/>
+                                <animations/>
+                                <edgeInsets key="edgeInsets" left="17" right="20" top="20" bottom="20"/>
                                 <beginningViews>
-                                    <button toolTip="Match letters in the pattern independent of case." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwD-0A-efg">
-                                        <rect key="frame" x="-2" y="184" width="123" height="18"/>
+                                    <button toolTip="Match letters in the pattern independent of case." horizontalHuggingPriority="749" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwD-0A-efg">
+                                        <rect key="frame" x="15" y="204" width="218" height="18"/>
+                                        <animations/>
                                         <buttonCell key="cell" type="check" title="Case Insensitive" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Gza-6e-aYb">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -703,8 +705,9 @@
                                             <action selector="toggleCaseSensitivity:" target="zfw-Iv-EKg" id="5pY-ab-2x8"/>
                                         </connections>
                                     </button>
-                                    <button toolTip="Ignore whitespace and #-prefixed comments in the pattern." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-eO-5ev">
-                                        <rect key="frame" x="-2" y="153" width="222" height="18"/>
+                                    <button toolTip="Ignore whitespace and #-prefixed comments in the pattern." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-eO-5ev">
+                                        <rect key="frame" x="15" y="173" width="218" height="18"/>
+                                        <animations/>
                                         <buttonCell key="cell" type="check" title="Allows Comments &amp; Whitespace" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="SEM-bP-n74">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -713,8 +716,9 @@
                                             <action selector="toggleWhitespace:" target="zfw-Iv-EKg" id="WAz-Uu-Ch4"/>
                                         </connections>
                                     </button>
-                                    <button toolTip="Treat the entire pattern as a literal string." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U43-LT-5ZC">
-                                        <rect key="frame" x="-2" y="122" width="161" height="18"/>
+                                    <button toolTip="Treat the entire pattern as a literal string." horizontalHuggingPriority="749" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="U43-LT-5ZC">
+                                        <rect key="frame" x="15" y="142" width="218" height="18"/>
+                                        <animations/>
                                         <buttonCell key="cell" type="check" title="Ignore Metacharacters" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="gqp-Ia-yaq">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -723,8 +727,9 @@
                                             <action selector="toggleIgnoreMetaCharacters:" target="zfw-Iv-EKg" id="cUj-bi-wJO"/>
                                         </connections>
                                     </button>
-                                    <button toolTip="Match letters in the pattern independent of case." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13F-qh-X9v">
-                                        <rect key="frame" x="-2" y="91" width="202" height="18"/>
+                                    <button toolTip="Match letters in the pattern independent of case." horizontalHuggingPriority="749" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13F-qh-X9v">
+                                        <rect key="frame" x="15" y="111" width="218" height="18"/>
+                                        <animations/>
                                         <buttonCell key="cell" type="check" title="Dot Matches Line Separators" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="PKQ-NS-tJH">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -733,8 +738,9 @@
                                             <action selector="toggleDotMatchesLineSeparatos:" target="zfw-Iv-EKg" id="AGs-uJ-UdA"/>
                                         </connections>
                                     </button>
-                                    <button toolTip="Allow ^ and $ to match the start and end of lines." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VmA-Zd-Of2">
-                                        <rect key="frame" x="-2" y="60" width="152" height="18"/>
+                                    <button toolTip="Allow ^ and $ to match the start and end of lines." horizontalHuggingPriority="749" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="VmA-Zd-Of2">
+                                        <rect key="frame" x="15" y="80" width="218" height="18"/>
+                                        <animations/>
                                         <buttonCell key="cell" type="check" title="Anchors Match Lines" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="clJ-za-6Jv">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -743,8 +749,9 @@
                                             <action selector="toggleAnchorsMatchLines:" target="zfw-Iv-EKg" id="cAh-ud-APB"/>
                                         </connections>
                                     </button>
-                                    <button toolTip="Treat only \n as a line separator (otherwise, all standard line separators are used)." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FBv-0y-Q1l">
-                                        <rect key="frame" x="-2" y="29" width="179" height="18"/>
+                                    <button toolTip="Treat only \n as a line separator (otherwise, all standard line separators are used)." horizontalHuggingPriority="749" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="FBv-0y-Q1l">
+                                        <rect key="frame" x="15" y="49" width="218" height="18"/>
+                                        <animations/>
                                         <buttonCell key="cell" type="check" title="Use Unix Line Separators" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="zug-ns-lRZ">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -753,8 +760,9 @@
                                             <action selector="toggleUseUnixLineSeparators:" target="zfw-Iv-EKg" id="6ST-ur-E0C"/>
                                         </connections>
                                     </button>
-                                    <button toolTip="Use Unicode TR#29 to specify word boundaries (otherwise, traditional regular expression word boundaries are used)." horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arq-r2-03h">
-                                        <rect key="frame" x="-2" y="-2" width="212" height="18"/>
+                                    <button toolTip="Use Unicode TR#29 to specify word boundaries (otherwise, traditional regular expression word boundaries are used)." horizontalHuggingPriority="751" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="arq-r2-03h">
+                                        <rect key="frame" x="15" y="18" width="218" height="18"/>
+                                        <animations/>
                                         <buttonCell key="cell" type="check" title="Use Unicode Word Boundaries" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="iEI-sM-zjG">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -764,6 +772,22 @@
                                         </connections>
                                     </button>
                                 </beginningViews>
+                                <constraints>
+                                    <constraint firstItem="arq-r2-03h" firstAttribute="leading" secondItem="FBv-0y-Q1l" secondAttribute="leading" id="07C-Vq-FMm"/>
+                                    <constraint firstItem="VmA-Zd-Of2" firstAttribute="leading" secondItem="13F-qh-X9v" secondAttribute="leading" id="2g0-N0-W2d"/>
+                                    <constraint firstItem="NwD-0A-efg" firstAttribute="leading" secondItem="XFe-8k-QM1" secondAttribute="leading" constant="17" id="6X5-o9-27Y"/>
+                                    <constraint firstItem="arq-r2-03h" firstAttribute="width" secondItem="FBv-0y-Q1l" secondAttribute="width" id="7uT-a2-lDh"/>
+                                    <constraint firstItem="VmA-Zd-Of2" firstAttribute="width" secondItem="13F-qh-X9v" secondAttribute="width" id="H9D-xn-Xx6"/>
+                                    <constraint firstItem="Cde-eO-5ev" firstAttribute="width" secondItem="NwD-0A-efg" secondAttribute="width" id="IyY-Jy-lAh"/>
+                                    <constraint firstItem="U43-LT-5ZC" firstAttribute="leading" secondItem="Cde-eO-5ev" secondAttribute="leading" id="LUo-a7-qTP"/>
+                                    <constraint firstItem="13F-qh-X9v" firstAttribute="width" secondItem="U43-LT-5ZC" secondAttribute="width" id="QDb-QR-0wd"/>
+                                    <constraint firstItem="Cde-eO-5ev" firstAttribute="leading" secondItem="NwD-0A-efg" secondAttribute="leading" id="ebs-bW-wuD"/>
+                                    <constraint firstItem="FBv-0y-Q1l" firstAttribute="width" secondItem="VmA-Zd-Of2" secondAttribute="width" id="hbd-oT-mGF"/>
+                                    <constraint firstItem="13F-qh-X9v" firstAttribute="leading" secondItem="U43-LT-5ZC" secondAttribute="leading" id="rmY-B4-GLP"/>
+                                    <constraint firstItem="U43-LT-5ZC" firstAttribute="width" secondItem="Cde-eO-5ev" secondAttribute="width" id="uAD-Wt-Thz"/>
+                                    <constraint firstItem="FBv-0y-Q1l" firstAttribute="leading" secondItem="VmA-Zd-Of2" secondAttribute="leading" id="uj6-WA-m4t"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cde-eO-5ev" secondAttribute="trailing" constant="20" id="wpP-Tv-Nt8"/>
+                                </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
@@ -787,9 +811,10 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="XFe-8k-QM1" secondAttribute="bottom" id="580-qw-fUF"/>
                             <constraint firstItem="XFe-8k-QM1" firstAttribute="leading" secondItem="PHE-9V-AFF" secondAttribute="leading" id="65E-Xv-L7a"/>
-                            <constraint firstAttribute="trailing" secondItem="XFe-8k-QM1" secondAttribute="trailing" id="Luj-9I-s2a"/>
                             <constraint firstItem="XFe-8k-QM1" firstAttribute="top" secondItem="PHE-9V-AFF" secondAttribute="top" id="Pa8-l8-qx3"/>
+                            <constraint firstAttribute="trailing" secondItem="XFe-8k-QM1" secondAttribute="trailing" id="ZZe-sJ-zQp"/>
                         </constraints>
+                        <animations/>
                     </view>
                     <connections>
                         <outlet property="anchorsMatchLinesButton" destination="VmA-Zd-Of2" id="o97-zs-TEF"/>
@@ -803,7 +828,7 @@
                 </viewController>
                 <customObject id="Kan-lb-5qm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="677" y="662.5"/>
+            <point key="canvasLocation" x="705.5" y="672"/>
         </scene>
         <!--Sanstring-->
         <scene sceneID="hIz-AP-VOD">
@@ -822,6 +847,7 @@
                                         <textView importsGraphics="NO" richText="NO" findStyle="bar" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="M8G-S0-BGm">
                                             <rect key="frame" x="0.0" y="0.0" width="588" height="122"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="minSize" width="588" height="122"/>
                                             <size key="maxSize" width="590" height="10000000"/>
@@ -833,23 +859,28 @@
                                             </connections>
                                         </textView>
                                     </subviews>
+                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </clipView>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="124" id="S9n-AD-gYl"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="kKm-Gx-MsC"/>
                                 </constraints>
+                                <animations/>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="gR1-6C-gwT">
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Is9-5f-bRk">
                                     <rect key="frame" x="573" y="1" width="16" height="122"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
                                 </scroller>
                             </scrollView>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9o6-W5-g3g">
                                 <rect key="frame" x="20" y="152" width="291" height="22"/>
+                                <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="regex find" drawsBackground="YES" id="0Iq-wx-GIp">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -865,6 +896,7 @@
                                         <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="bar" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="HAR-fN-TSs">
                                             <rect key="frame" x="0.0" y="0.0" width="588" height="122"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="minSize" width="588" height="122"/>
                                             <size key="maxSize" width="590" height="10000000"/>
@@ -873,19 +905,24 @@
                                             <size key="maxSize" width="590" height="10000000"/>
                                         </textView>
                                     </subviews>
+                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </clipView>
+                                <animations/>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="QsY-5Z-ngw">
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="pAg-nC-UHj">
                                     <rect key="frame" x="573" y="1" width="16" height="122"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
                                 </scroller>
                             </scrollView>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ahz-ci-zr7">
                                 <rect key="frame" x="319" y="152" width="291" height="22"/>
+                                <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="replace" drawsBackground="YES" id="Jfb-gI-DFr">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -909,6 +946,7 @@
                             <constraint firstItem="5Wt-KW-btB" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="xyf-bq-Fzv"/>
                             <constraint firstItem="9o6-W5-g3g" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="y5G-K4-Obq"/>
                         </constraints>
+                        <animations/>
                     </view>
                     <connections>
                         <outlet property="inputTextView" destination="M8G-S0-BGm" id="a39-yZ-Gt6"/>

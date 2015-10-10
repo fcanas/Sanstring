@@ -30,6 +30,18 @@ class ViewController: NSViewController, NSTextDelegate {
         }
         let inputString = inputTextView.string ?? ""
         outputTextView.string = regex?.stringByReplacingMatchesInString(inputString, options: [], range: NSMakeRange(0, inputString.characters.count), withTemplate: replaceTextField.stringValue) ?? ""
+        
+        print("====================")
+
+        regex?.enumerateMatchesInString(inputString, options: [], range: NSMakeRange(0, inputString.characters.count), usingBlock: { (result, matchingFlags, stop) -> Void in
+            print("--------------------")
+            print("range: \(result!.range)")
+            print("flags: \(matchingFlags)")
+            print("--------------------")
+            for range in 0..<result!.numberOfRanges {
+                print("capture group range: \(result!.rangeAtIndex(range))")
+            }
+        })
     }
     
     deinit {
